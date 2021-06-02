@@ -85,3 +85,12 @@ button {
 	color: var(--darkest);
 	opacity: 1; /* Firefox */
 }
+
+@media only screen and (max-width: 600px) {
+	.absolute_box {
+		width: 300px;
+	}
+	input#m {
+		width: 79%;
+	}
+}
