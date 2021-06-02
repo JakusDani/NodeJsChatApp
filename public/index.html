@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real-Time Chat</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script>
         var name = prompt("please enter your name");
     </script>
 </head>
 <body>
-    <div id="intro">
-        <h1>ChatRoom</h1>
-    </div>
-    <ul id="messages"></ul>
 
-    <form action="">
-        <input type="text" id="m" placeholder="Enter your message..." autocomplete="off" required>
-        <button>SEND</button>
-    </form>
+    <div class="relative_box">
+        <div class="absolute_box">
+            <ul id="messages"></ul>
+        
+            <div class="input_forms">
+                <form action="">
+                    <input type="text" id="m" placeholder="Enter your message..." autocomplete="off" required>
+                    <button><i class="fas fa-paper-plane fa-lg"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
