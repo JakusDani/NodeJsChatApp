@@ -19,18 +19,40 @@
 }
 
 .absolute_box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
     height: 500px;
-    width: 600px;
+    width: 300px;
     background: var(--darkest);
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
+    bottom: 0;
+    right: 50px;
 }
 
 ul#messages {
-    padding: 20px;
+    padding: 0 20px;
+    height: 397px;
+    overflow: auto;
+    background: #5c626b;
+}
+
+.header{
+    padding: 10px;
+    color: var(--white);
+}
+
+.header:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--green);
+    /* right: 0; */
+    top: 17px;
+    left: 59px;
+    border-radius: 100%;
 }
 
 li#list {
@@ -58,11 +80,11 @@ li {
     background: var(--grey);
     width: 100%;
     padding: 15px;
-    border-radius: 0 0 10px 10px;
+    /* border-radius: 0 0 10px 10px; */
 }
 
 input#m {
-    width: 90%;
+    width: 79%;
     padding: 5px 15px;
     border-radius: 10px;
     outline: none;
@@ -85,6 +107,83 @@ button {
 	color: var(--darkest);
 	opacity: 1; /* Firefox */
 }
+
+.hide {
+    display: none;
+}
+
+.littleAbsoluteBox {
+        position: fixed;
+        /* top: 50%; */
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+        height: 43px;
+        width: 300px;
+        background: var(--darkest);
+        border-radius: 10px 10px 0 0;
+        bottom: 0px;
+        right: 50px;
+}
+
+.web_page_header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    /* background: var(--grey); */
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    font-size: 2.4rem;
+    color: var(--white);
+}
+
+.images {
+    position: absolute;
+    right: 311px;
+    top: 67px;
+    transform: rotate(10deg);
+}
+
+.text p {
+    color: var(--green);
+}
+
+.flexbox_container {
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flexbox_container > div {
+    height: 300px;
+    width: 400px;
+    background: var(--darkest);
+    margin: 10px 10px;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content_image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform .5s, filter 1s ease-in-out;
+    filter: grayscale(100%);
+    
+}
+
+.content_image:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
 
 @media only screen and (max-width: 600px) {
 	.absolute_box {

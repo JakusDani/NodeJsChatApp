@@ -13,7 +13,26 @@
 <body>
 
     <div class="relative_box">
+        <!-- Web Page header -->
+        <div class="web_page_header">
+                <div class="text">
+                    <h1>Welcome to my Site!!!</h1>
+                    <p>Put some motto here...</p>
+                </div>
+                <div class="images">
+                    <img src="images/Hands - chat.png" alt="">
+                </div>
+        </div>
+        <!-- CARD CONTENT -->
+        <div class="flexbox_container">
+            <div><img class="content_image" src="https://www.publicdomainpictures.net/pictures/230000/velka/scenic-landscape-1499784730rFj.jpg" alt=""></div>
+            <div><img class="content_image" src="https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2021/03/landscape-photography-tips-4.jpg?fit=1500%2C908&ssl=1" alt=""></div>
+            <div><img class="content_image" src="https://images.photowall.com/products/60869/azores-mountain-landscape-1.jpg?h=699&q=85" alt=""></div>
+            <div><img class="content_image" src="https://www.mickeyshannon.com/images/landscape-photography.jpg" alt=""></div>
+        </div>
+        <!-- CHAT START -->
         <div class="absolute_box">
+            <h3 class="header">Chat</h3>
             <ul id="messages"></ul>
         
             <div class="input_forms">
@@ -23,6 +42,7 @@
                 </form>
             </div>
         </div>
+        <!-- CHAT END -->
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
@@ -45,5 +65,6 @@
             $('#messages').append($('<li>').text(msg));
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
