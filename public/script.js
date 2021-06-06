@@ -9,3 +9,4 @@ chatHeader.addEventListener('click', () => {
     inputForms.classList.toggle("hide");
     messages.classList.toggle("hide");
 });
+console.log("Hello World")
